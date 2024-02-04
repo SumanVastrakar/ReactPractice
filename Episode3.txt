@@ -1,0 +1,6 @@
+⭕️What is `NPM`?
+✅ NPM stands for Node Package Manager. It is a package manager for JavaScript programming language,
+primarily used to manage and install packages or libraries for Node.js.
+Node.js is a runtime that allows you to execute JavaScript code server-side,
+and NPM is the default package manager that comes with it.
+
