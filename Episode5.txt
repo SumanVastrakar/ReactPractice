@@ -1,0 +1,170 @@
+⭕️ Is JSX mandatory for React?
+✅ No, JSX (JavaScript XML) is not mandatory for building React applications,
+but it is highly recommended and widely used. JSX is a syntax extension for JavaScript
+that looks similar to XML or HTML and allows you to write React components in a more
+concise and expressive way.
+
+While you can write React applications without JSX, doing so can make your code more
+verbose and less readable. JSX provides a syntax that closely resembles HTML,
+making it easier for developers to visualize and understand the structure of their
+UI components.
+
+🌼 without JSX : 
+const heading  = react.createElement(h1, {
+    id: 'heading,
+}, 'heading');
+
+🌼 with JSX : 
+import React from 'react';
+
+const MyComponent = () => {
+  return (
+    <div>
+      <h1>Hello, JSX!</h1>
+    </div>
+  );
+};
+
+export default MyComponent;
+
+⭕️ Is ES6 mandatory for React?
+✅ No, ES6 (ECMAScript 2015) is not mandatory for React, but it is highly recommended and
+widely used. React itself is a JavaScript library, and you can write React applications
+using older versions of ECMAScript or plain JavaScript. However, using ES6 features and
+syntax enhances the development experience and provides several benefits, making your 
+code more concise, readable, and maintainable.
+
+Arrow Functions: Simplifies function syntax and handles the binding of this more effectively.
+// ES5
+function myFunction() {
+  // function body
+}
+
+// ES6
+const myFunction = () => {
+  // function body
+};
+
+Destructuring Assignment: Enables you to extract values from objects and arrays more conveniently.
+// ES5
+var person = { name: 'John', age: 30 };
+var name = person.name;
+var age = person.age;
+
+// ES6
+const person = { name: 'John', age: 30 };
+const { name, age } = person;
+
+Classes: Provides a more concise and clear syntax for defining constructor functions and creating 
+object-oriented patterns.
+// ES5
+function Car(make, model) {
+  this.make = make;
+  this.model = model;
+}
+
+// ES6
+class Car {
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+}
+
+⭕️ How can I write comments in JSX?
+✅ In JSX, you can write comments using curly braces {} and the /* ... */ syntax. 
+
+⭕️ What is <React.Fragment></React.Fragment> and <></> ?
+✅ creating a fragment that groups multiple elements without introducing a new parent element in the HTML
+output.
+
+⭕️ What is Virtual DOM?
+✅ The Virtual DOM (Document Object Model) is a concept used in React and other modern web frameworks to
+optimize the performance of updating the user interface. It is a lightweight, in-memory representation
+of the actual DOM elements on a web page.
+
+Here's how the Virtual DOM works in React:
+
+Component Rendering:
+When a React component renders, it doesn't directly manipulate the real DOM. Instead, it creates a virtual 
+representation of the DOM in memory.
+
+Virtual DOM Reconciliation:
+When the state or props of a component change, a new virtual DOM tree is created.
+React then compares the new virtual DOM tree with the previous one using a process called reconciliation.
+
+Differential Update:
+React identifies the differences (diffing) between the new and old virtual DOM trees.
+This process determines the minimum number of changes needed to update the actual DOM.
+
+Update to the Actual DOM:
+React calculates the most efficient way to update the real DOM based on the differences found during the 
+diffing process.
+Only the parts of the DOM that have changed are updated, minimizing the impact on performance.
+
+⭕️ What is Reconciliation in React?
+✅ Reconciliation is the process by which React updates the actual Document Object Model (DOM) to reflect 
+changes in the Virtual DOM. When the state or props of a React component change, a new virtual DOM tree is
+ created, and React performs a process called reconciliation to determine how to efficiently update the real 
+ DOM.
+
+The key steps in the reconciliation process are as follows:
+
+Diffing:
+React compares the new virtual DOM tree with the previous one to identify the differences (changes).
+This step is known as "diffing," and it involves traversing both the new and old virtual DOM trees and noting
+ the variations between them.
+
+Reconciliation Algorithm:
+React uses a reconciliation algorithm to determine the most efficient way to update the real DOM based on the
+differences found during the diffing process.
+The algorithm aims to minimize the number of changes required to transition from the old state of the DOM to 
+the new state.
+
+Update Strategy:
+React identifies three types of changes:
+Insertions: New elements that weren't present in the previous virtual DOM.
+Deletions: Elements that were present in the previous virtual DOM but are no longer there.
+Updates: Elements that exist in both the new and old virtual DOM but have changed properties or content.
+
+Minimal Updates:
+React calculates the most efficient set of operations to apply to the real DOM to bring it in sync with the 
+new virtual DOM.
+This involves updating only the parts of the DOM that have changed, minimizing the impact on performance.
+Reconciliation is a crucial part of React's performance optimization strategy. By efficiently updating the DOM 
+based on the differences between virtual DOM trees, React ensures that updates are performed in a way that is both fast and minimally disruptive to the user interface.
+
+It's important to note that React's reconciliation process is one of the reasons why the Virtual DOM is a
+powerful optimization tool, allowing developers to work with a virtual representation of the DOM and 
+letting React handle the efficient updating of the actual DOM.
+
+
+⭕️ What is React Fiber?
+✅ React Fiber is an internal reimplementation of the core algorithm used by React to handle the rendering and 
+updating of the user interface. It was introduced to React in version 16.0 as an alternative to the previous
+stack-based reconciliation algorithm. React Fiber is designed to improve the performance and responsiveness
+of React applications, particularly in handling complex and time-consuming tasks like rendering large lists,
+animations, and handling user interactions.
+
+⭕️ Why we need keys in React? When do we need keys in React?
+✅ In React, keys are used to uniquely identify and track elements in a collection (such as an array of 
+components) during the process of reconciliation. Reconciliation is the algorithm that React uses to 
+efficiently update the user interface based on changes in the Virtual DOM.
+
+⭕️ Can we use index as keys in React?
+✅ While it is possible to use the index as keys in React, it is generally not recommended, 
+especially when the list can change dynamically. Using the index as keys can lead to issues in certain
+scenarios and may not provide stable and predictable results. It is generally considered an anti-pattern.
+
+⭕️ What is props in React? Ways to
+✅ In React, "props" (short for properties) is a special keyword that represents the input data passed to a
+React component. Props are used to pass information from a parent component to a child component. They are
+a way to customize and configure components by providing them with data.
+
+⭕️ What is a Config Driven UI ?
+✅ A Config-Driven UI, short for Configuration-Driven User Interface, refers to an approach where the layout,
+behavior, and appearance of a user interface are primarily determined by configuration data rather than
+hard-coded in the application's source code. In other words, the UI is driven by external configuration
+files or settings, allowing for greater flexibility and customization without the need for code changes.
+
+

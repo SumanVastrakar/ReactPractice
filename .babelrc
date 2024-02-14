@@ -1,0 +1,4 @@
+// this is the configuration for babel 
+{
+    "plugins": [ ["transform-remove-console", { "exclude": [ "error", "warn"] }] ]
+  }

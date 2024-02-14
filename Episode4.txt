@@ -1,0 +1,47 @@
+⭕️ What is JSX?
+✅ JSX stands for JavaScript XML. It's a syntax extension for JavaScript that is
+commonly used with React, a popular JavaScript library for building user interfaces.
+JSX allows you to write HTML-like code in your JavaScript files, making it easier
+to define the structure of UI components.
+
+⭕️ Superpowers of JSX?
+✅  Readability and Conciseness:
+JSX syntax resembles HTML, making the code more readable and intuitive.
+It provides a concise and expressive way to define the structure of UI components,
+making it easier for developers to understand and maintain.
+
+JavaScript Integration:
+JSX allows embedding JavaScript expressions within curly braces {} directly in the markup.
+This makes it easy to include dynamic values, variables, and expressions directly
+within the JSX code.
+🌼 const name = "World";
+const element = <h1>Hello, {name}!</h1>;
+
+Components and Reusability:
+JSX promotes the creation of reusable and modular components. Components can be
+composed together, and the syntax for rendering components within other components
+is straightforward.
+
+Inline Styles and CSS Classes:
+JSX allows the use of inline styles directly within the components,
+providing a convenient way to style elements. Additionally, CSS classes
+can be applied using the className attribute.
+
+⭕️ {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+✅ 
+{TitleComponent}:
+This is used when you want to reference a component or a variable within the JSX.
+It assumes that TitleComponent is a variable or a component previously defined in your 
+code. In this case, it won't render the component but rather the reference to it, and 
+you'll need to make sure to use it as a JSX element, like {<TitleComponent />},
+to actually render it.
+
+{<TitleComponent/>}:
+This syntax is used to directly render the TitleComponent. It treats TitleComponent as a
+React element and renders it in place. This is the most common way to render components in JSX.
+
+{<TitleComponent></TitleComponent>}:
+This is an alternative syntax to render the TitleComponent. It's equivalent to
+{<TitleComponent />}, and you can use either form based on your preference.
+
+
