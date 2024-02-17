@@ -1,0 +1,48 @@
+⭕️ What are various ways to add images into our App? Explain with code examples?
+✅ 1. Image Tag (HTML):
+<img src="path/to/image.jpg" alt="Description">
+
+2. CSS Background Image:
+.element-with-background {
+    background-image: url('path/to/image.jpg');
+}
+
+5. Local Storage (React Native):
+import React from 'react';
+import { View, Image } from 'react-native';
+
+const App = () => {
+    return (
+        <View>
+            <Image source={require('./path/to/image.jpg')} />
+        </View>
+    );
+};
+
+export default App;
+
+⭕️ What would happen if we do console.log(useState())?
+✅
+
+⭕️ How will useEffect behave if we don't add a dependency array ?
+✅ When you use the useEffect hook in React without specifying a dependency array, the effect will
+run after every render. This means the effect will run on the initial render and every subsequent 
+re-render, regardless of changes to any dependencies. It's equivalent to not having a dependency
+array at all.
+
+⭕️ What is SPA?
+✅ SPA stands for Single Page Application. It's a web application or website that interacts with the
+user by dynamically rewriting the current page rather than loading entire new pages from the server.
+In other words, in a SPA, the entire application is contained within a single HTML page, and the
+content is updated dynamically as the user interacts with the application.
+
+⭕️ What is difference between Client Side Routing and Server Side Routing?
+✅ Client-Side Routing:
+The routing logic is handled on the client side, within the web browser.
+Page changes and transitions are managed by JavaScript running in the browser.
+Typically used in Single Page Applications (SPAs) where the entire application is loaded on the initial page load, and subsequent page changes are handled dynamically.
+
+Server-Side Routing:
+The routing logic is handled on the server.
+Each user interaction triggers a request to the server, which then sends back the appropriate HTML for the requested page.
+Traditional multi-page applications often use server-side routing.

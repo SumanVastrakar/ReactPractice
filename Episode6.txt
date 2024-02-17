@@ -1,0 +1,46 @@
+⭕️ What is the difference between Named Export, Default export and * as export?
+✅ 
+Named Exports:
+// module.js
+export const variable1 = 'Value 1';
+export const variable2 = 'Value 2';
+import { variable1, variable2 } from './module';
+
+Default Export:
+const defaultExport = 'This is the default export';
+export default defaultExport;
+import myDefaultExport from './module';
+
+* as Export (Wildcard or Namespace Import):
+export const variable1 = 'Value 1';
+export const variable2 = 'Value 2';
+import * as myModule from './module';
+
+⭕️ What is the importance of config.js file?
+✅ A config.js file, or a configuration file in general, is important in software development for several reasons:
+
+Centralized Configuration:
+A config.js file allows you to centralize configuration settings for your application in
+one place. This makes it easier to manage and update configuration options without
+scattering them throughout your codebase. 
+
+Environment-specific Configurations:
+Different environments (e.g., development, testing, production) may require different 
+configurations, such as API endpoints, database connections, or debug settings. A config.js
+file allows you to define environment-specific configurations and switch between them 
+easily.
+
+Security and Sensitive Information:
+Configuration files provide a secure way to store sensitive information, such as API keys,
+database credentials, or other secrets. By keeping this information in a separate 
+configuration file, you can easily exclude it from version control systems and protect 
+sensitive data.
+
+⭕️ What are React Hooks?
+✅ Certainly! React Hooks are functions that enable functional components to manage state, side effects, and
+other React features that were previously exclusive to class components. They were introduced in React 
+version 16.8 as a way to allow functional components to have more advanced capabilities without the need 
+for classes.
+
+⭕️ Why do we need a useState Hook?
+✅The useState Hook in React is essential for functional components to manage and update their state.

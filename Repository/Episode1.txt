@@ -1,0 +1,193 @@
+⭕️ What is Emmet?
+✅ Emmet is a web development tool that allows for faster HTML and CSS coding.
+It is essentially a set of abbreviations or shortcuts that expand into HTML
+or CSS code snippets. Emmet is particularly popular among web developers for 
+its ability to enhance workflow efficiency.
+🌼 ul>li*3>a
+<ul>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+</ul>
+
+⭕️ Difference between a Library and Framework?
+✅ Library:
+Imagine you're building a toy car, and you need wheels for it.
+Instead of making the wheels from scratch, you go to a store and buy
+pre-made wheels. These wheels are like a library. You pick the ones you need 
+and attach them to your car. In programming, a library is a collection of 
+pre-written pieces of code that you can use for specific tasks in your program.
+
+Framework:
+Now, think of a framework as a model kit for building a specific type of toy,
+let's say a model airplane. The kit comes with all the pieces you need - the wings, 
+body, tail, etc. The instructions tell you how to put everything together.
+In programming, a framework is like a set of tools and rules that help you 
+build an entire application. It provides a structure and instructions on how
+different parts should work together.
+
+In simpler terms:
+
+A library is like buying individual parts that you can use as needed.
+A framework is like getting a kit with all the parts and instructions on how to build something specific.
+
+⭕️ What is CDN and why do we use it?
+✅ It is basically developed to speed up the delivery of static HTML content for users 
+all around the world.
+- Nowadays, a CDN should be used whenever HTTP traffic is served.
+- At a fundamental level a CDN brings content closer to the user, this improves the performance
+of a web service as perceived by the user.
+
+CDN stands for Content Delivery Network. It is a system of distributed servers that work together to deliver web content,
+ such as images, stylesheets, JavaScript files, and videos, to users based on their geographic location.
+  The primary purpose of a CDN is to improve the performance, reliability, and availability of web content.
+
+Here's why CDNs are used and their key benefits:
+
+Faster Content Delivery:
+CDNs cache (store) copies of static content on servers strategically located around the world. When a user requests a particular piece of content, it is served from the nearest CDN server rather than the origin server. This reduces latency and speeds up the delivery of content to the end user.
+
+Load Distribution:
+CDNs distribute the load of delivering content across multiple servers. This helps to prevent a single server or data center from becoming a bottleneck, ensuring that even during periods of high traffic, content can be delivered quickly and reliably.
+
+Scalability:
+CDNs are designed to scale easily. As the demand for content increases, additional CDN servers can be added to the network, providing the necessary resources to handle increased traffic.
+
+Reliability and Redundancy:
+CDNs offer redundancy and failover mechanisms. If one server in the network fails, another server can step in to deliver the content. This enhances the overall reliability of content delivery.
+
+Cost Savings:
+CDNs can help reduce the load on the origin server, which may lead to lower hosting costs. Additionally, improved efficiency in content delivery can result in cost savings for both content providers and users.
+
+Security:
+CDNs often include security features such as DDoS (Distributed Denial of Service) protection, SSL/TLS encryption, and other security measures. This helps in protecting websites and web applications from various online threats.
+
+Global Reach:
+With servers distributed across the globe, CDNs enable content to be delivered quickly to users regardless of their geographic location. This is especially beneficial for websites and applications with a global audience.
+
+In summary, CDNs are used to enhance the speed, availability, and reliability of delivering web content to users. They are an integral part of modern web infrastructure, particularly for websites and applications that aim to provide a fast and consistent user experience across the world.
+
+⭕️ Why is React known as React?
+✅ It "reacts" quickly to changes without reloading the whole page.
+ It uses the virtual DOM to efficiently update parts of a webpage.
+  It's built around components that "react" and update.
+
+⭕️ What is crossorigin in script tag?
+✅ The crossorigin attribute in the <script> tag is used when loading external scripts,
+such as JavaScript files, from a different origin (i.e., a different domain, protocol, or port).
+This attribute is important for security reasons, as it helps prevent certain types of attacks,
+such as Cross-Site Scripting (XSS).
+
+the browser will make a request to retrieve the script from the specified URL.
+If the script is hosted on a different origin, the browser may enforce the Same-Origin Policy,
+which restricts web pages from making requests to a different domain than the one that served the web page
+
+anonymous: This is the default value. It means that the browser will request the script without including any 
+credentials (such as cookies or HTTP authentication) in the request. This is suitable for scripts that are intended
+to be public and do not require authentication.
+🌼 <script src="https://example.com/script.js" crossorigin="anonymous"></script>
+
+use-credentials: This value indicates that the browser should include credentials (such as cookies) when requesting the script.
+This is appropriate when the script is hosted on a server that requires authentication.
+🌼 <script src="https://example.com/script.js" crossorigin="use-credentials"></script>
+
+⭕️ What is diference between React and ReactDOM ?
+✅ React and ReactDOM are two distinct libraries in the React ecosystem, each serving a different purpose.
+
+React:
+React is a JavaScript library for building user interfaces. It provides a declarative syntax for defining UI components and manages the state of these components efficiently.
+React allows developers to build reusable UI components, making it easier to maintain and scale applications.
+React provides features like virtual DOM (Document Object Model) for efficient updates, component lifecycle methods, and a unidirectional data flow architecture.
+React can be used for building web applications, single-page applications (SPAs), and mobile applications using frameworks like React Native.
+
+ReactDOM:
+ReactDOM is a package that serves as the glue between React and the DOM (Document Object Model).It provides methods for rendering React components to the DOM.
+ReactDOM is specific to web applications and enables React to interact with the browser's DOM.
+The key method provided by ReactDOM is ReactDOM.render(), which is used to render a React element into a specified DOM container.
+ReactDOM also provides other methods for working with the DOM, such as ReactDOM.createPortal() for rendering elements outside the parent hierarchy and ReactDOM.hydrate() for server-side rendering hydration.
+
+In summary, while React is the core library for building user interfaces with a focus on component-based architecture,
+state management, and rendering logic, ReactDOM is a separate package that facilitates the
+integration of React with the DOM in web applications. If you are building web applications with React,
+you'll typically use both React and ReactDOM together. If you're working on other platforms, such as mobile,
+you might use different packages like React Native for rendering.
+
+⭕️ What is difference between react.development.js and react.production.js files via CDN?
+✅ When you include React via a CDN (Content Delivery Network), you often have the choice between using the development
+ (unminified) and production (minified) versions of the library.
+  The main differences between react.development.js and react.production.js are related to performance, debugging, and file size.
+
+File Size:
+react.development.js is the development version of React. It includes additional warnings, comments,
+and helpful error messages to aid developers in debugging.
+react.production.js is the production version of React. It has been minified and optimized for
+performance by removing unnecessary comments, whitespace, and debug information, resulting in a smaller file size.
+
+Performance:
+The development version (react.development.js) includes various checks, warnings, and debugging aids 
+that are helpful during development but can impact runtime performance. These checks help catch common mistakes 
+and provide helpful error messages.
+The production version (react.production.js) removes these checks and optimizations, focusing on delivering the 
+smallest and fastest version suitable for deployment.
+
+Debugging:
+The development version provides more informative error messages and warnings,
+making it easier to identify and fix issues during development.
+The production version prioritizes performance and minimizes the amount of information included in the file to
+reduce its size. This can make debugging more challenging in a production environment.
+When deploying a React application to production, it is recommended to use the production version
+(react.production.js) for better performance and a smaller file size. During development, using
+the development version (react.development.js) is beneficial due to the additional debugging aids and error messages.
+
+⭕️ What is async and defer?
+✅ async and defer are attributes used with the <script> tag in HTML to control the loading and execution of external JavaScript files.
+
+async:
+When you include the async attribute in the <script> tag, it means that the script will be executed asynchronously as soon as it
+is available, without waiting for the HTML parsing to be complete.
+This attribute is beneficial when the script doesn't depend on the order of execution or doesn't manipulate the
+DOM immediately upon loading. It allows the browser to continue parsing and rendering the HTML while fetching and
+executing the script in the background.
+🌼 <script async src="example.js"></script>
+
+defer:
+The defer attribute, on the other hand, also delays the execution of the script, but it ensures that the script is
+executed in order after the HTML parsing is complete but before the DOMContentLoaded event.
+Scripts with the defer attribute will be executed in the order they appear in the HTML document.
+This is useful when the script depends on the DOM structure, and you want to make sure it runs after the HTML
+document has been fully parsed.
+🌼 <script defer src="example.js"></script>
+
+async:
+Executes asynchronously as soon as the script is available.
+Does not guarantee the order of execution.
+Suitable for scripts that don't depend on the order of execution or immediate DOM manipulation.
+
+defer:
+Delays execution until after HTML parsing is complete but before the DOMContentLoaded event.
+Maintains the order of execution as they appear in the document.
+Useful for scripts that depend on the DOM structure and need to be executed in order.
+
+const apiUrl = 'https://example.com/data';
+
+fetch(apiUrl).then((    ))
+
+===========SSR and CSR ========================
+Certainly! Let's break down server-side rendering (SSR) and client-side rendering (CSR) in simple terms:
+
+Server-Side Rendering (SSR):
+
+In SSR, the server is responsible for generating the HTML content that is sent to the browser.
+When you request a web page, the server processes your request and sends back a fully-rendered HTML page.
+The browser receives the complete HTML, which already contains the content, and then displays it.
+This approach is often associated with traditional web applications and can be beneficial for SEO, as search engines can easily crawl and index the content.
+Client-Side Rendering (CSR):
+
+In CSR, the server sends a basic HTML file along with JavaScript code to the browser.
+The browser then executes the JavaScript code, which fetches data and generates the content dynamically on the client side.
+The user experiences faster initial page loads, as only the necessary HTML and JavaScript are initially transferred.
+CSR is often associated with modern single-page applications (SPAs), where most of the rendering and content updates happen in the browser.
+In summary:
+
+SSR: The server prepares the complete HTML, sends it to the browser, and the browser displays it.
+CSR: The server sends a basic HTML file and JavaScript to the browser. The browser executes the JavaScript, fetches data, and dynamically generates and updates the content.
