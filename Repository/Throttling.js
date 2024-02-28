@@ -18,4 +18,3 @@ const throttle = (getData, limit) => {
 }
 
 const betterFunction = throttle(getData, 3000)
-

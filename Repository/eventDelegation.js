@@ -8,3 +8,4 @@ document.querySelector('#category').addEventListener('click', (e) => {
        window.location.href = '/' + e.target.id 
    }
 })
+

@@ -24,7 +24,7 @@ export default App;
 ⭕️ What would happen if we do console.log(useState())?
 ✅
 
-⭕️ How will useEffect behave if we don't add a dependency array ?
+⭕️ How will useEffect behave if we don't add a dependency array ? 
 ✅ When you use the useEffect hook in React without specifying a dependency array, the effect will
 run after every render. This means the effect will run on the initial render and every subsequent 
 re-render, regardless of changes to any dependencies. It's equivalent to not having a dependency
@@ -46,3 +46,4 @@ Server-Side Routing:
 The routing logic is handled on the server.
 Each user interaction triggers a request to the server, which then sends back the appropriate HTML for the requested page.
 Traditional multi-page applications often use server-side routing.
+        

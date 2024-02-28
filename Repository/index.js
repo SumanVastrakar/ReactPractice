@@ -18,17 +18,6 @@
 //         console.error('Error', error);
 //     })
 
-// fetch(apiUrl).then(response => {
-//    if(!response.ok) {
-//       throw new Error('Error');
-//    }
-//    return response.json();
-// }).then((data) => {
-//    console.log('Data', data);
-// }).catch((err) => {
-//    console.error('Error', error);
-// })
-
 
 // fetch(apiUrl).then((response) => {
 //    if(!response.ok){
@@ -57,6 +46,7 @@
 // ).then(data => {
  
 // })
+
 
 // fetch(apiUrl, {
 //    method: 'POST',
@@ -221,53 +211,86 @@ const test = {1: 'a', 2: {3: 'b', 4: 'c', 5: {6: 'd', 7: 'e'}}};
 
 // console.log(reduceData);
 
-let test1 = [1, 2, 3, [6, 7], [[[NaN, undefined]]]]
-
-const arrayFlattening = (test1) => {
-   let result = [];
-
-      if(! Array.isArray(test1)){
-         return test1;
-      }
-
-      for( let data of test1){
-        result = result.concat(arrayFlattening(data))
-      }
-      return result;
-}
-console.log(arrayFlattening(test1));
-
-const flattenObj = (obj) => {
-   let result = {};
-
-   for( let i in obj ){
-      if(typeof obj[i] === 'object' ){
-         let temp = flattenObj(obj[i]);
-         for( let j in temp ){
-            result[i+ '.'+ j] = temp[j];
-         }
-      }else{
-         result[i] = obj[i]
-      }
-   }
-
-   return result;
-}
-console.log(flattenObj(test))
 
 
-// const flattenObject = (obj) => {
+// const arrayFlattening = (test1) => {
+//    let result = [];
+
+//       if(! Array.isArray(test1)){
+//          return test1;
+//       }
+
+//       for( let data of test1){
+//         result = result.concat(arrayFlattening(data))
+//       }
+//       return result;
+// }
+// console.log(arrayFlattening(test1));
+
+// const flattenObj = (obj) => {
 //    let result = {};
 
-//    for(let i in obj) {
-//       if( typeof obj[i] === 'object'){
-//          let temp = flattenObject(obj[i]);
+//    for( let i in obj ){
+//       if(typeof obj[i] === 'object' ){
+//          let temp = flattenObj(obj[i]);
 //          for( let j in temp ){
-//              result[i +'.'+ j] = temp[j]
+//             result[i+ '.'+ j] = temp[j];
 //          }
 //       }else{
 //          result[i] = obj[i]
 //       }
 //    }
+
 //    return result;
-// }
+// }/
+
+
+const flat = (obj)  => {
+   let result = {};
+
+for( let i in obj ){
+   if(typeof obj[i] === 'object'){
+      let temp = flat(obj[i]);
+      for( let j in temp ){
+         result[i + '.' + j] = temp[j]
+      }
+   }else{
+      result[i] = obj[i];
+   }
+}
+
+  return result;
+}
+console.log(flat(test))
+
+
+// const recursiveWay = (obj) => {
+//    const result = {};
+//    for( let i in obj){
+       
+//      //   console.log('type of object', typeof obj === 'object', obj[i]);
+//      if(typeof obj[i] === 'object'){
+//         result[i] = recursiveWay(obj[i]);
+//      }else{
+//           result[i] = obj[i]
+//      }  
+//    }
+ 
+//    return result;
+//  } 
+//  console.log(recursiveWay(obj))
+
+const flatO = (test) => {
+ const result = {};
+ for( let i in test){
+   if(typeof test[i] === 'object' ){
+     let temp = flat(test[i]);
+     for( let j in temp){
+      result[i + '.' + j] = temp[j]
+     }
+   }else{
+      result[i] = test[i]
+   }
+ }
+}
+console.log(flatO(test))
